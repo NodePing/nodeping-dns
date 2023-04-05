@@ -1,7 +1,4 @@
-[![wercker status](https://app.wercker.com/status/ed5cab9035dfb9167714f305340490c2/s/master "wercker status")](https://app.wercker.com/project/byKey/ed5cab9035dfb9167714f305340490c2)
-[![Build Status](https://secure.travis-ci.org/tjfontaine/node-dns.png)](http://travis-ci.org/tjfontaine/node-dns)
-
-native-dns -- A replacement DNS stack for node.js
+nodeping-dns -- A replacement DNS stack for node.js
 =================================================
 
 # DEAD. See forks!
@@ -16,7 +13,7 @@ Some forks have been created:
 - Fork by @EduardoRuizM: https://github.com/EduardoRuizM/native-dnssec-dns ([relevant comment](https://github.com/tjfontaine/node-dns/issues/111#issuecomment-1426890990))
 - **Tangerine** by @titanism: https://github.com/forwardemail/tangerine ([relevant comment](https://github.com/tjfontaine/node-dns/issues/111#issuecomment-1444460007))
 
-*Disclaimer: I, @taoeffect, have not revied the code in this fork, and am not responsible for any issues you may or may not run into. May it be a success!*
+This fork has one purpose only - to remove the 'optimist' dependency that npm complains about.
 
 # (Below follows original README)
 
@@ -24,24 +21,24 @@ Installation
 ------------
 
 ```
-npm install native-dns
+npm install nodeping-dns
 ```
 
 Client
 ------
 
-native-dns exports what should be a 1:1 mapping of the upstream node.js dns
+nodeping-dns exports what should be a 1:1 mapping of the upstream node.js dns
 module. That is to say if it's listed in the [docs](http://nodejs.org/docs/latest/api/dns.html)
 it should behave similarly. If it doesn't please file an [issue](https://github.com/tjfontaine/node-dns/issues/new).
 
 Request
 -------
 
-Beyond matching the upstream module, native-dns also provides a method for
+Beyond matching the upstream module, nodeping-dns also provides a method for
 customizing queries.
 
 ```javascript
-var dns = require('native-dns');
+var dns = require('nodeping-dns');
 var util = require('util');
 
 var question = dns.Question({
